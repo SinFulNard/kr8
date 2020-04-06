@@ -1,0 +1,49 @@
+{
+  "run": {
+    "timeout": "5m"
+  },
+  "linters": {
+    "disable-all": true,
+    "enable": [
+      "deadcode",
+      "gocyclo",
+      "golint",
+      "goconst",
+      "misspell",
+      "ineffassign",
+      "lll",
+      "vet",
+      "gosec",
+      "dupl",
+      "unconvert",
+      "errcheck",
+      "staticcheck",
+      "structcheck",
+      "varcheck",
+      "maligned",
+      "gofmt"
+    ]
+  },
+  "linters-settings": {
+    "dupl": {
+      "threshold": 100
+    },
+    "lll": {
+      "line-length": 120
+    },
+    "gocyclo": {
+      "min-complexity": 12
+    }
+  },
+  "issues": {
+    "exclude-rules": [{
+      "path": "_test.go",
+      "linters": [
+        "gocyclo",
+        "errcheck",
+        "dupl",
+        "gosec"
+      ]
+    }]
+  }
+}
